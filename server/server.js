@@ -24,6 +24,7 @@ app.addHook("onRequest", (req, res, done) => {
   done()
 })
 const prisma = new PrismaClient()
+
 const CURRENT_USER_ID = (
   await prisma.user.findFirst({
     where: {
